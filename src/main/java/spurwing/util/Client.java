@@ -59,7 +59,8 @@ public class Client {
 										 String last_name,
 										 String email,
 										 String phone_number,
-										 String contact_type) throws IOException, JSONException {
+										 String contact_type,
+										 String appointment_id) throws IOException, JSONException {
 		String url = API_URL + "bookings/complete_booking.json";
 		JSONObject params = new JSONObject();
 		Map<String, String> headers = new HashMap<String, String>();
@@ -73,6 +74,22 @@ public class Client {
 		if (email != null) params.put("email", email);
 		if (phone_number != null) params.put("phone_number", phone_number);
 		if (contact_type != null) params.put("contact_type", contact_type);
+		if (appointment_id != null) params.put("appointment_id", appointment_id);
+		return HttpUtil.postJson(url, params.toString(), headers);
+	}
+
+	static public String create_group_appointment(String authorization,
+										 String provider_id,
+										 String appointment_type_id, 
+										 String datetime) throws IOException, JSONException {
+		String url = API_URL + "appointments";
+		JSONObject params = new JSONObject();
+		Map<String, String> headers = new HashMap<String, String>();
+		headers.put("authorization", "Bearer " + authorization);
+
+		if (provider_id != null) params.put("provider_id", provider_id);
+		if (appointment_type_id != null) params.put("appointment_type_id", appointment_type_id);
+		if (datetime != null) params.put("datetime", datetime);
 		return HttpUtil.postJson(url, params.toString(), headers);
 	}
 

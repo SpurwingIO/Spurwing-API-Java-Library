@@ -12,4 +12,8 @@ dependencies {
 
 }
 
+run {
+	enableAssertions = true
+}
+
 mainClassName = 'test.Test'

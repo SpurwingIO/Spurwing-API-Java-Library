@@ -296,7 +296,7 @@ public class HttpUtil {
 		InputStream is = conn.getInputStream();
 		String response = streamToString(is);
 
-		System.out.println(method + " " + conn.getResponseCode() + ": " + url);
+		// System.out.println(method + " " + conn.getResponseCode() + ": " + url);
 		
 		// handle redirects
 		if (conn.getResponseCode() == 301) {
