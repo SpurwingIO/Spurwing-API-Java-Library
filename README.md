@@ -40,6 +40,7 @@ The currently implemented API functions and features are:
 - get_days_available
 - get_slots_available
 - complete_booking
+- create_group_appointment
 - list_appointments
 - delete_appointment
 
