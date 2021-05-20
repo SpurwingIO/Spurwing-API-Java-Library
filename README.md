@@ -4,6 +4,8 @@ Lightweight Java library for Spurwing's API.
 
 Spurwing's API makes it easy to add robust scheduling and booking to your application. We power millions of appointment bookings for thousands of companies, from marketplaces to SaaS & healthcare.
 
+![image](https://user-images.githubusercontent.com/9488406/119051175-224a7b80-b9c3-11eb-8619-f803e3e2910b.png)
+
 ## Account
 To use this API you need to obtain API credentials by signin up here: https://spurwing.io/
 
